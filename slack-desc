@@ -1,4 +1,4 @@
-libconfig: libconfig (library for processing structured cofiguration files)
+libconfig: libconfig (library for processing structured configuration files)
 libconfig:
 libconfig: Libconfig is a simple library for processing structured
 libconfig: configuration files. The file format is more compact and more
@@ -11,4 +11,4 @@ libconfig: The library includes bindings for both the C and C++ languages.
 libconfig: It works on POSIX-compliant UNIX systems (GNU/Linux, Mac OS X,
 libconfig: Solaris, FreeBSD) and Windows (2000, XP and later).
 libconfig:
-libconfig: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+libconfig: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
