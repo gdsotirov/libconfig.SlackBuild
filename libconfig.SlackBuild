@@ -80,16 +80,23 @@ rm --recursive $PKG/usr/info/dir
 gzip_info $PKG
 
 install --mode 755 --directory $PKG/install
-install --mode 644 $CWD/doinst.sh      $PKG/install/doinst.sh
-install --mode 644 $CWD/slack-desc     $PKG/install/slack-desc
-install --mode 644 $CWD/slack-required $PKG/install/slack-required
+install --mode 644 --preserve-timestamp \
+        $CWD/doinst.sh      $PKG/install/doinst.sh
+install --mode 644 --preserve-timestamp \
+        $CWD/slack-desc     $PKG/install/slack-desc
+install --mode 644 --preserve-timestamp \
+        $CWD/slack-required $PKG/install/slack-required
 
 SBDIR=$PKG/usr/src/slackbuilds/$NAME-$VERSION
 install --mode 755 --directory $SBDIR
-install --mode 644 $CWD/doinst.sh        $SBDIR/doinst.sh
-install --mode 644 $CWD/slack-desc       $SBDIR/slack-desc
-install --mode 644 $CWD/slack-required   $SBDIR/slack-required
-install --mode 644 $CWD/$NAME.SlackBuild $SBDIR/$NAME.SlackBuild
+install --mode 644 --preserve-timestamp \
+        $CWD/doinst.sh        $SBDIR/doinst.sh
+install --mode 644 --preserve-timestamp \
+        $CWD/slack-desc       $SBDIR/slack-desc
+install --mode 644 --preserve-timestamp \
+        $CWD/slack-required   $SBDIR/slack-required
+install --mode 644 --preserve-timestamp \
+        $CWD/$NAME.SlackBuild $SBDIR/$NAME.SlackBuild
 
 # Pack
 cd $PKG
@@ -103,4 +110,5 @@ if [ "$1" == "--cleanup" ]; then
   rm --recursive $SRC
   rm --recursive $PKG
 fi
+
 
